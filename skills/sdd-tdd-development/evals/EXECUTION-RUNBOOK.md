@@ -1,0 +1,56 @@
+# Execution Runbook
+
+Use this runbook for manual execution benchmarking of `sdd-tdd-development`.
+
+## Goal
+
+Judge skill behavior after activation, not trigger quality.
+
+## Suggested workspace
+
+Use shared template:
+
+- `E:\code\AI-code\.agents\skills\shared-evals\workspace-template\`
+
+Suggested benchmark root:
+
+- `E:\code\AI-code\.agents\skills\sdd-tdd-development-workspace\`
+
+Scaffold command:
+
+- `python E:\code\AI-code\.agents\skills\scripts\init_execution_workspace.py --skill-path E:\code\AI-code\.agents\skills\sdd-tdd-development --workspace-root E:\code\AI-code\.agents\skills\sdd-tdd-development-workspace --iteration iteration-1`
+
+## Recommended loop
+
+1. Pick one eval from `evals/evals.json`
+2. Create `eval_metadata.json` from shared template
+3. Run prompt with skill
+4. Run same prompt without skill
+5. Save transcripts and outputs
+6. Grade both with `GRADING-RUBRIC.md`
+7. Compare with `REVIEW-CHECKLIST.md`
+8. Write delta notes
+9. Update workspace `TRACKER.md`
+
+## What to compare
+
+- sequence discipline
+- explicit RED gate
+- spec quality
+- routing quality
+- durable artifact awareness
+
+## Per-eval files
+
+Each eval folder should contain:
+
+- `eval_metadata.json`
+- `benchmark-notes.md`
+- `run-sheet-with_skill.md`
+- `run-sheet-without_skill.md`
+- `with_skill/`
+- `without_skill/`
+
+## Stop rule
+
+If assertions are not discriminating enough to separate weak vs strong outputs, improve evals before running more samples.

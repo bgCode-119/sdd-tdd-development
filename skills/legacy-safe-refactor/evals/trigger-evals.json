@@ -1,0 +1,43 @@
+[
+  {
+    "query": "Safely refactor this five-year-old checkout module without changing behavior.",
+    "should_trigger": true
+  },
+  {
+    "query": "Help AI understand this old billing module before touching it.",
+    "should_trigger": true
+  },
+  {
+    "query": "Split this god file, but first preserve current behavior with feature tests.",
+    "should_trigger": true
+  },
+  {
+    "query": "Untangle these messy imports and hidden side effects in a fragile legacy service.",
+    "should_trigger": true
+  },
+  {
+    "query": "Clean this old module up a bit without breaking anything.",
+    "should_trigger": true
+  },
+  {
+    "query": "Build a brand new payments API from scratch with spec and tests.",
+    "should_trigger": false
+  },
+  {
+    "query": "Fix this isolated validation bug with a minimal regression test.",
+    "should_trigger": false
+  },
+  {
+    "query": "Explain what characterization tests are.",
+    "should_trigger": false
+  },
+  {
+    "query": "Generate a diagram of our architecture.",
+    "should_trigger": false
+  },
+  {
+    "query": "Open the local app and test the checkout flow in the browser.",
+    "should_trigger": false
+  }
+]
+

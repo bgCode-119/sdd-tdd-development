@@ -1,0 +1,89 @@
+{
+  "skill_name": "sdd-tdd-development",
+  "evals": [
+    {
+      "id": 1,
+      "name": "new-feature-discipline",
+      "prompt": "Build a new TODO create API with AI. First define a small spec, then derive tests, prove RED, implement the minimum GREEN, and describe what durable artifacts should be updated. Do not jump straight to implementation.",
+      "expected_output": "The assistant uses a spec-first, tests-first workflow instead of going straight to code, and makes RED/GREEN plus artifact updates explicit.",
+      "files": [],
+      "expectations": [
+        "The response classifies the task as a new feature or intentional behavior change",
+        "The response defines or asks for a small human-reviewable spec before implementation",
+        "The response turns the spec into tests or checks before production code",
+        "The response requires proving RED before implementation",
+        "The response calls for minimum GREEN and only then refactor",
+        "The response mentions durable artifacts such as rules, spec, contracts, tests, or CI"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "legacy-routing",
+      "prompt": "I need to safely refactor a five-year-old checkout module. It has messy globals, hidden side effects, and unclear imports. Tell AI how to proceed without changing behavior.",
+      "expected_output": "The assistant chooses the legacy-safe path: read-only structure mapping, current-state spec, characterization tests, hidden-coupling mapping, and small safe refactor slices.",
+      "files": [],
+      "expectations": [
+        "The response starts with a read-only architecture or structure pass rather than immediate edits",
+        "The response asks for or produces a current-state spec before refactor",
+        "The response requires characterization or feature tests to lock current behavior",
+        "The response identifies hidden state, hidden contracts, side effects, or multi-file coupling as part of the behavior surface",
+        "The response warns not to fix suspicious legacy behavior inside the refactor by default",
+        "The response requires small refactor slices with rerun verification after each slice"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "github-pipeline-governance",
+      "prompt": "Our team wants AI-written code to enter GitHub safely. Define the working loop from issue to merge, including what humans still own.",
+      "expected_output": "The assistant defines a deterministic GitHub pipeline and a generate-verify-correct flywheel, with explicit human review ownership.",
+      "files": [],
+      "expectations": [
+        "The response includes an issue to branch to commit to PR workflow",
+        "The response requires deterministic checks such as lint, tests, typecheck, or CI before merge",
+        "The response distinguishes AI review from required CI gates",
+        "The response states that humans still own business semantics, risk, or final merge decisions",
+        "The response describes a structured failure-feedback or generate-verify-correct loop",
+        "The response warns against mixing unrelated refactor, bugfix, and feature work in one PR"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "resist-vibe-code",
+      "prompt": "Just vibe-code this new billing webhook quickly. I do not need a process, just write it fast.",
+      "expected_output": "The assistant resists pure vibe-coding for production work and still introduces a minimal spec-first, tests-first safety workflow.",
+      "files": [],
+      "expectations": [
+        "The response does not accept a pure code-first workflow for production behavior",
+        "The response introduces at least a minimal spec or acceptance criteria before implementation",
+        "The response requires tests or checks before claiming the work is done",
+        "The response treats quick-code phrasing as insufficient reason to skip verification"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "plain-language-explanation",
+      "prompt": "Explain in plain language: what is the difference between SDD and TDD?",
+      "expected_output": "The assistant gives a concise conceptual explanation and does not overreact by forcing a full implementation ceremony onto a pure explanatory question.",
+      "files": [],
+      "expectations": [
+        "The response explains that SDD defines what correct means",
+        "The response explains that TDD turns correctness into executable checks",
+        "The response stays proportional to an explanation-only request",
+        "The response does not unnecessarily invent a full implementation plan for a purely conceptual question"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "small-bug-minimal-fix",
+      "prompt": "We have a bug in discount calculation. Patch it, but do not refactor anything else.",
+      "expected_output": "The assistant chooses the small-bug path: regression test first, minimal fix, rerun verification, no scope growth.",
+      "files": [],
+      "expectations": [
+        "The response classifies the task as a small bug or clear behavior correction",
+        "The response requires a regression test before the fix",
+        "The response keeps the fix narrow and avoids opportunistic refactor",
+        "The response includes rerunning verification after the minimal fix"
+      ]
+    }
+  ]
+}

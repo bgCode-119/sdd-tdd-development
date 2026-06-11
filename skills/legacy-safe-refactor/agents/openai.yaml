@@ -1,0 +1,4 @@
+interface:
+  display_name: "Legacy Safe Refactor"
+  short_description: "Read first, lock behavior, then safely refactor brittle legacy code"
+  default_prompt: "Safely refactor this legacy code. Do not edit first: map entry points, responsibilities, hidden state, and hidden contracts; write a current-state spec; lock behavior with characterization tests; then refactor in small verified slices."

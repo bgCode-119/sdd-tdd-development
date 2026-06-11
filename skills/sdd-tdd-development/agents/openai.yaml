@@ -1,0 +1,4 @@
+interface:
+  display_name: "SDD + TDD Development"
+  short_description: "Spec-first, tests-first workflow for production AI coding"
+  default_prompt: "Use SDD + TDD for this change. Do not code first: define a small spec, derive checks, prove RED, implement the minimum GREEN, verify, and update durable artifacts such as tests, specs, contracts, or CI notes."

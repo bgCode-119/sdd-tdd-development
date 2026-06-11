@@ -1,0 +1,43 @@
+[
+  {
+    "query": "Build a new order-cancel API and make sure AI does it safely with tests.",
+    "should_trigger": true
+  },
+  {
+    "query": "Fix this discount bug, but keep the change minimal and verified.",
+    "should_trigger": true
+  },
+  {
+    "query": "Add a frontend form for creating todos. Please define expected behavior first and avoid coding blindly.",
+    "should_trigger": true
+  },
+  {
+    "query": "Refactor this service and make sure CI and tests gate the merge.",
+    "should_trigger": true
+  },
+  {
+    "query": "Just vibe-code this production webhook quickly.",
+    "should_trigger": true
+  },
+  {
+    "query": "What is the difference between SDD and TDD?",
+    "should_trigger": true
+  },
+  {
+    "query": "Please summarize this meeting transcript into bullet points.",
+    "should_trigger": false
+  },
+  {
+    "query": "Generate a hero image for my landing page.",
+    "should_trigger": false
+  },
+  {
+    "query": "Open localhost:3000 and click the login button.",
+    "should_trigger": false
+  },
+  {
+    "query": "Refactor this five-year-old checkout module without changing behavior.",
+    "should_trigger": false
+  }
+]
+

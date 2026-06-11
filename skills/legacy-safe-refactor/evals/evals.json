@@ -1,0 +1,82 @@
+{
+  "skill_name": "legacy-safe-refactor",
+  "evals": [
+    {
+      "id": 1,
+      "name": "read-only-first-pass",
+      "prompt": "A user asks AI to refactor a legacy checkout module with globals and hidden side effects. Tell the assistant what to do first.",
+      "expected_output": "The assistant chooses a read-only structure pass and does not jump into implementation.",
+      "files": [],
+      "expectations": [
+        "The response starts with read-only analysis before editing",
+        "The response asks for or produces entry points, responsibilities, state map, or hidden contracts",
+        "The response does not recommend immediate code cleanup as the first move"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "characterization-safety-net",
+      "prompt": "We need to preserve current behavior while splitting a god file into smaller modules. Describe the safety net AI should build first.",
+      "expected_output": "The assistant builds a current-state spec plus characterization tests before refactoring.",
+      "files": [],
+      "expectations": [
+        "The response requires a current-state spec rather than desired future behavior",
+        "The response requires characterization or feature tests before refactor",
+        "The response covers side effects, hidden state, or suspicious legacy quirks as part of the locked behavior surface",
+        "The response warns not to fix suspicious behavior by default during the refactor"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "slice-and-stop-rules",
+      "prompt": "The characterization tests are green. Now define how AI should perform the actual refactor and when it must stop.",
+      "expected_output": "The assistant defines small verified refactor slices plus explicit stop conditions.",
+      "files": [],
+      "expectations": [
+        "The response requires small refactor slices rather than a big rewrite",
+        "The response keeps public APIs stable by default",
+        "The response reruns tests after each slice",
+        "The response includes stop conditions such as flaky tests, unclear API surface, or uncontrolled diff growth",
+        "The response includes Git or PR traceability and human merge judgment"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "resist-informal-cleanup",
+      "prompt": "Just clean this old order module up a bit. No need to be formal.",
+      "expected_output": "The assistant still treats old fragile code as high-risk and begins with read-first plus behavior-locking steps.",
+      "files": [],
+      "expectations": [
+        "The response does not jump straight into cleanup edits",
+        "The response requires understanding current entry points or hidden state first",
+        "The response introduces current-state spec or characterization tests despite the informal wording",
+        "The response treats legacy fragility as a reason for discipline rather than a reason to move fast"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "route-greenfield-away",
+      "prompt": "We are building a brand new payments feature from scratch. Which workflow should we use?",
+      "expected_output": "The assistant recognizes that this is not primarily a legacy-safe-refactor task and routes the user toward the broader SDD+TDD workflow.",
+      "files": [],
+      "expectations": [
+        "The response distinguishes greenfield work from legacy refactor work",
+        "The response points toward `sdd-tdd-development` or an equivalent general spec-first tests-first workflow",
+        "The response does not force a legacy characterization-test-first process as the primary path"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "separate-bugfix-from-refactor",
+      "prompt": "We think this old VAT rounding branch is wrong. While refactoring, please also fix it if you see it.",
+      "expected_output": "The assistant separates suspected behavior fixes from safe structural refactor and warns against silently changing legacy behavior.",
+      "files": [],
+      "expectations": [
+        "The response warns that suspicious old behavior should not be changed silently during structural refactor",
+        "The response recommends locking current behavior first",
+        "The response separates possible bugfix work from the refactor slice",
+        "The response requires explicit approval or separate handling for the behavior change"
+      ]
+    }
+  ]
+}
