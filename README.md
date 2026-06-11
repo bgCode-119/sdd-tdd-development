@@ -7,6 +7,11 @@ Reusable AI coding skills for:
 - safe production code generation
 - legacy behavior-preserving refactor
 
+Chinese guide:
+
+- `README.zh-CN.md`
+- `INDEX.zh-CN.md`
+
 ## Included skills
 
 ### `sdd-tdd-development`
