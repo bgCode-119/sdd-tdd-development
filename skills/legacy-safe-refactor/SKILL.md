@@ -1,6 +1,6 @@
 ---
 name: legacy-safe-refactor
-description: Safe legacy refactor and characterization-test workflow for old brittle code. Use whenever user asks to safely refactor old code, split a god file or god class, untangle a large module, preserve behavior while cleaning up, map hidden side effects, understand legacy code before editing, or add feature tests / characterization tests before refactor. Trigger on phrases like legacy code, old code, fragile module, hidden imports, hidden state, safe refactor, behavior-preserving cleanup, current-state spec, or read first then refactor. Do not wait for user to mention characterization tests explicitly. For greenfield feature work or ordinary small bugfixes, prefer `sdd-tdd-development`.
+description: 'Safe legacy refactor and characterization-test workflow for old brittle code. Use whenever user asks to safely refactor old code, split a god file or god class, untangle a large module, preserve behavior while cleaning up, map hidden side effects, understand legacy code before editing, or add feature tests / characterization tests before refactor. Trigger on phrases like legacy code, old code, fragile module, hidden imports, hidden state, safe refactor, behavior-preserving cleanup, current-state spec, or read first then refactor. Do not wait for user to mention characterization tests explicitly. For greenfield feature work or ordinary small bugfixes, prefer `sdd-tdd-development`.'
 version: 0.2.1
 ---
 

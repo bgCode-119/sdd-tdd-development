@@ -1,6 +1,6 @@
 ---
 name: sdd-tdd-development
-description: Spec-Driven Development (SDD) and Test-Driven Development (TDD) for AI coding. Use whenever user asks to implement or change production code: build feature, fix bug, add API or endpoint, create component, change business logic, write acceptance criteria, add regression tests, or make AI-generated code safe to merge. Trigger on requests about spec-first development, tests-first development, RED/GREEN/REFACTOR, safe AI coding, code review, CI-gated changes, or "quick code" / "vibe code" that still needs correctness. Do not wait for user to mention SDD or TDD explicitly. For fragile legacy code where preserving current behavior is primary risk, pair with `legacy-safe-refactor`.
+description: 'Spec-Driven Development (SDD) and Test-Driven Development (TDD) for AI coding. Use whenever user asks to implement or change production code: build feature, fix bug, add API or endpoint, create component, change business logic, write acceptance criteria, add regression tests, or make AI-generated code safe to merge. Trigger on requests about spec-first development, tests-first development, RED/GREEN/REFACTOR, safe AI coding, code review, CI-gated changes, or "quick code" / "vibe code" that still needs correctness. Do not wait for user to mention SDD or TDD explicitly. For fragile legacy code where preserving current behavior is primary risk, pair with `legacy-safe-refactor`.'
 version: 0.3.0
 ---
 
